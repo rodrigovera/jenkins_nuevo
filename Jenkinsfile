@@ -14,7 +14,7 @@ pipeline{
 	//agent{docker{ image 'maven:3.8.8-eclipse-temurin-17' } }
 	environment {
 		mavenHome= tool 'myMaven'
-		dockerHome= too 'mydocker'
+		dockerHome= tool 'mydocker'
 		PATH= "$dockerHome/bin:$mavenHome/bin:$PATH"
 	}
 	stages{
