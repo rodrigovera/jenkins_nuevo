@@ -12,7 +12,7 @@
 pipeline{
 	//agent any
 	
-	agent{docker{ image 'maven:3.8.8-eclipse-temurin-17' } }
+	agent{docker{ image 'maven:3.9.9-eclipse-temurin-11' } }
 	environment {
 		mavenHome= tool 'myMaven'
 		dockerHome= tool 'mydocker'
