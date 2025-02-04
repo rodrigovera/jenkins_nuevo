@@ -10,7 +10,13 @@
 //	}
 //}
 pipeline{
-	agent any
+	//agent any
+	agent { 
+    docker { 
+        image 'maven:3.8.8-eclipse-temurin-17' 
+        args '--user=root' 
+    } 
+    }
 	//agent{docker{ image 'maven:3.8.8-eclipse-temurin-17' } }
 	environment {
 		mavenHome= tool 'myMaven'
