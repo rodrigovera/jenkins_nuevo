@@ -11,8 +11,14 @@
 //}
 pipeline{
 	//agent any
-	
-	agent{docker{ image 'maven:3.9.9-eclipse-temurin-11' } }
+	agent { 
+    docker { 
+        image 'maven:3.9.9-eclipse-temurin-11' 
+        args '--user=root' 
+    } 
+}
+	//agent{docker{ image 'maven:3.9.9-eclipse-temurin-11'
+	//		 } }
 	environment {
 		mavenHome= tool 'myMaven'
 		dockerHome= tool 'mydocker'
